@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/stchristian/multi-step-form-main)
-- Live Site URL: [Add live site URL here](https://multi-step-form-main-blush.vercel.app/)
+- Solution URL [here](https://github.com/stchristian/multi-step-form-main)
+- Live Site URL [here](https://multi-step-form-main-blush.vercel.app/)
 
 ## My process
 
@@ -53,21 +53,21 @@ Users should be able to:
 
 ### What I learned
 
-- Margins collapse. It's been a long time since I came across with an issue caused by margin collapse but I guess we have to be always reminded. One point I was investigating why my `body` element is starting not exactly from the top of the viewport. It was caused by the top margin of a child element.
+- Margins collapse. It's been a long time since I came across with an issue caused by margin collapse but I guess we have to be always reminded. I experienced some strange behaviour when the `body` element didn't start exactly from the top of the viewport. It was caused by the top margin of a child element.
 
-- Found a good [site](https://www.w3.org/WAI/ARIA/apg/) for accessibility with lots of examples. The selection of plans and addons are based on examples from their page.
+- Found a good [site](https://www.w3.org/WAI/ARIA/apg/) for accessibility with lots of examples. The input controls for the plans and addons are based on examples from their page.
 
-- How to use local fonts in NextJS
+- How to use local fonts in Next.js
 
-- Added some e2e tests with [Playwright](https://playwright.dev/). This cmd was nice for "testing" the my tests `playwright test --project='chromium' --ui`. If I don't choose a project, test would run in all browsers
+- Added some e2e tests with [Playwright](https://playwright.dev/). The following cmd made "testing" my tests easier `playwright test --project='chromium' --ui`. If I don't specify a project, test would run in all browsers as specified in _playwright.config.ts_
 
-- At one point I was looking for a CSS attribute that would disable the element to create a "box". I found it: `display: contents;`. This became really useful when making the site responsive, so I avoided duplicating things.
+- At one point I was looking for a CSS attribute that I've already used before, that would disable the element to create a "box". I found it: `display: contents;`. This became really useful when making the site responsive, so I avoided duplicating some parts of the code.
 
 - Learned about the `dvh` CSS unit [here](https://dev.to/frehner/css-vh-dvh-lvh-svh-and-vw-units-27k4)
 
 - Separated the logic of the stepper with the help of generics and `React Context` into the _formWithSteps.tsx_ file. Instantiated it in _multiStepForm.ts_
 
-- If I see very weird errors from NextJS it's probably because of a server/client component problem.
+- If I see very weird errors from NextJS it's probably because of a server/client component problem... :)
 
 ### Continued development
 
@@ -82,4 +82,4 @@ I think there is a lot to improve on the code.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/stchristian)
+- Frontend Mentor - [@stchristian](https://www.frontendmentor.io/profile/stchristian)
