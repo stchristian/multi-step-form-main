@@ -18,7 +18,7 @@ export function StepContent({ children }: React.PropsWithChildren<{}>) {
 
   return (
     <div className="contents lg:flex lg:flex-col lg:w-full max-w-[500px] mx-auto">
-      <div className="bg-white lg:contents p-6 rounded-xl m-4 shadow-lg flex flex-col">{children}</div>
+      <main className="bg-white lg:contents p-6 rounded-xl m-4 shadow-lg flex flex-col">{children}</main>
       {!completed && (
         <footer className="flex flex-row-reverse sticky lg:static bottom-0 shadow-lg lg:shadow-none bg-white p-4 mt-auto justify-between lg:p-0">
           {currentStep === 4 ? (
