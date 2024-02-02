@@ -53,7 +53,7 @@ Users should be able to:
 
 ### What I learned
 
-- Margins collapse. It's been a long time since I came across with an issue caused but I guess we have to be always remindend. One point I was investigating why my `body` element is starting not exactly from the top of the viewport. It was caused by the top margin of a child element.
+- Margins collapse. It's been a long time since I came across with an issue caused by margin collapse but I guess we have to be always reminded. One point I was investigating why my `body` element is starting not exactly from the top of the viewport. It was caused by the top margin of a child element.
 
 - Found a good [site](https://www.w3.org/WAI/ARIA/apg/) for accessibility with lots of examples. The selection of plans and addons are based on examples from their page.
 
@@ -71,7 +71,14 @@ Users should be able to:
 
 ### Continued development
 
-I think there is a lot to improve on the code. Form components could be even more accessible. I am not really satisfied with the data structure and the handling of the prices. Semantic elements are missing here and there. I could came up with a better file structure and I feel some namings are also poorly chosen.
+I think there is a lot to improve on the code.
+
+- Form components could be even more accessible.
+- I am not really satisfied with the data structure and the handling of the prices.
+- Semantic elements are missing here and there.
+- I could came up with a better file structure
+- I feel some namings are also poorly chosen.
+- More tests
 
 ## Author
 
