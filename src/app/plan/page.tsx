@@ -41,13 +41,6 @@ export default function PlanPage() {
         />
         <span className={`${period === "yearly" ? "text-blue-marine" : "text-gray-cool"}`}>Yearly</span>
       </label>
-      {/* <input
-          type="checkbox"
-          name="period"
-          onChange={(e) => {
-            setPeriod(e.target.checked ? "yearly" : "monthly");
-          }}
-        /> */}
     </StepContent>
   );
 }
