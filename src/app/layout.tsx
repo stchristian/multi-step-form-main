@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import bgMobile from "@/../public/images/bg-sidebar-mobile.svg";
 import Image from "next/image";
-import { Stepper } from "@/components/Stepper";
-import { MultiStepFormProvider } from "@/components/MultiStepFormProvider";
+import { Stepper } from "@/app/_components/Stepper";
+import { SubscriptionMultiStepFormProvider } from "@/app/SubscriptionMultiStepFormProvider";
 
 const ubuntu = localFont({
   src: [
@@ -58,10 +58,10 @@ export default function RootLayout({
           />
         </div>
         <div className="contents lg:flex lg:flex-row lg:w-[1000px] bg-white container p-4 rounded-lg shadow-lg">
-          <MultiStepFormProvider>
+          <SubscriptionMultiStepFormProvider>
             <Stepper />
             {children}
-          </MultiStepFormProvider>
+          </SubscriptionMultiStepFormProvider>
         </div>
       </body>
     </html>

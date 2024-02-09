@@ -1,39 +1,26 @@
 "use client";
+
+import {
+  CreateMultiStepFormArgs,
+  MultiStepFormContextValueType,
+  FormErrors,
+  MultiStepProviderProps,
+} from "@/generic-multi-step-form/MultiStepForm.types";
 import { usePathname, useRouter } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-export type FormErrors<T> = { [key in keyof T]?: string };
+export function createMultiStepForm<T = unknown>({ validateFn, steps }: CreateMultiStepFormArgs<T>) {
+  const MultiStepFormContext = createContext<MultiStepFormContextValueType<T> | undefined>(undefined);
 
-type FormContextType<T> = T & {
-  setValue: (name: keyof T, value: any) => void;
-  errors: FormErrors<T>;
-  currentStep: number;
-  submitStep: () => void;
-  completed: boolean;
-  submitForm: () => void;
-  goBack: () => void;
-};
-
-export type ValidationFunction<T> = (values: T, step: number) => FormErrors<T>;
-
-export function createFormWithSteps<T = unknown>({
-  validateFn,
-  steps,
-}: {
-  validateFn: ValidationFunction<T>;
-  steps: Array<any>;
-}) {
-  const FormWithStepsContext = createContext<FormContextType<T> | undefined>(undefined);
-
-  function useFormWithStepsContext() {
-    const context = useContext(FormWithStepsContext);
+  function useMultiStepFormContext() {
+    const context = useContext(MultiStepFormContext);
     if (!context) {
-      throw new Error("useFormContext must be used within a FormProvider");
+      throw new Error("useMultiStepFormContext must be used within a MultiStepFormProvider");
     }
     return context;
   }
 
-  function FormWithStepsProvider({ children, initialValues }: { children: React.ReactNode; initialValues: T }) {
+  function MultiStepFormProvider({ children, initialValues }: MultiStepProviderProps<T>) {
     const router = useRouter();
     const pathname = usePathname();
 
@@ -61,13 +48,6 @@ export function createFormWithSteps<T = unknown>({
       setCompleted(true);
     }, []);
 
-    // const reset = useCallback(() => {
-    //   setCompleted(false);
-    //   setErrors({});
-    //   setState(initialValues);
-    //   setCurrentStep(1);
-    // }, []);
-
     const goBack = useCallback(() => {
       // Validate step
       if (currentStep !== 1) {
@@ -94,20 +74,20 @@ export function createFormWithSteps<T = unknown>({
     const value = useMemo(
       () => ({
         ...state,
-        setState,
         errors,
-        setValue,
         currentStep,
+        completed,
+        setState,
+        setValue,
         submitStep,
         submitForm,
         goBack,
-        completed,
       }),
       [state, goBack, setState, setValue, currentStep, submitStep, errors, completed, submitForm]
     );
 
-    return <FormWithStepsContext.Provider value={value}>{children}</FormWithStepsContext.Provider>;
+    return <MultiStepFormContext.Provider value={value}>{children}</MultiStepFormContext.Provider>;
   }
 
-  return { useFormWithStepsContext, FormWithStepsProvider };
+  return { useMultiStepFormContext, MultiStepFormProvider };
 }

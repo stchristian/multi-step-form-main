@@ -1,5 +1,6 @@
 "use client";
-import { FormErrors, createFormWithSteps } from "./formWithSteps";
+
+import { FormErrors, createMultiStepForm } from "../generic-multi-step-form";
 import { steps } from "@/constants/steps";
 
 type PeriodType = "monthly" | "yearly";
@@ -32,7 +33,7 @@ function validateFn(values: FormValues, step: number) {
   return errors;
 }
 
-export const { useFormWithStepsContext, FormWithStepsProvider } = createFormWithSteps<FormValues>({
+export const { useMultiStepFormContext, MultiStepFormProvider } = createMultiStepForm<FormValues>({
   validateFn,
   steps,
 });

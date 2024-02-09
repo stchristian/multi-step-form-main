@@ -1,10 +1,9 @@
 "use client";
 
-import { PropsWithChildren, useContext } from "react";
-import { steps } from "../constants/steps";
+import { steps } from "../../constants/steps";
 import bgDesktop from "@/../public/images/bg-sidebar-desktop.svg";
 import Image from "next/image";
-import { useFormWithStepsContext } from "@/multiStepForm";
+import { useMultiStepFormContext } from "@/app/SubscriptionMultiStepForm";
 
 interface StepProps {
   active?: boolean;
@@ -31,7 +30,7 @@ export function Step({ index, name, active }: StepProps) {
 }
 
 export function Stepper() {
-  const { currentStep } = useFormWithStepsContext();
+  const { currentStep } = useMultiStepFormContext();
 
   return (
     <nav aria-label="Steps of your order" className="lg:relative">

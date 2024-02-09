@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
 import { addons } from "@/constants/addons";
-import { Description, Header, StepContent } from "@/components/StepContent";
+import { Description, Header, StepContent } from "@/app/_components/StepContent";
 import { plans } from "@/constants/plans";
 import { formatAddonPrice, formatPlanPrice } from "@/utils";
 import { Fragment, useMemo } from "react";
 import thankYouSvg from "@/../public/images/icon-thank-you.svg";
 import Link from "next/link";
-import { useFormWithStepsContext } from "@/multiStepForm";
+import { useMultiStepFormContext } from "@/app/SubscriptionMultiStepForm";
 
 interface SummaryPageProps {}
 
 export default function SummaryPage({}: SummaryPageProps) {
-  const { planId, selectedAddonIds, period, completed } = useFormWithStepsContext();
+  const { planId, selectedAddonIds, period, completed } = useMultiStepFormContext();
 
   const plan = useMemo(() => plans.find((p) => p.id === planId)!, [planId]);
   const selectedAddons = useMemo(
