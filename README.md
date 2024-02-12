@@ -71,13 +71,7 @@ Users should be able to:
 
 ### Continued development
 
-I think there is a lot to improve on the code.
-
-- Form components could be even more accessible.
-- I am not really satisfied with the data structure and the handling of the prices.
-- Semantic elements are missing here and there.
-- I could came up with a better file structure
-- I feel some namings are also poorly chosen.
+- Some form components could be even more accessible.
 - More tests
 
 ## Author
