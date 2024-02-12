@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import { addons } from "@/constants/addons";
-import { Description, Header, StepContent } from "@/app/_components/StepContent";
+import { Description, Header, StepContent } from "@/components/StepContent";
 import { plans } from "@/constants/plans";
 import { formatAddonPrice, formatPlanPrice } from "@/utils";
 import { Fragment, useMemo } from "react";
 import thankYouSvg from "@/../public/images/icon-thank-you.svg";
 import Link from "next/link";
-import { useMultiStepFormContext } from "@/app/SubscriptionMultiStepForm";
+import { useMultiStepFormContext } from "@/app/_lib/subscription-form";
 
 interface SummaryPageProps {}
 

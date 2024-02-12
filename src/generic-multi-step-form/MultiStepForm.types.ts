@@ -19,7 +19,7 @@ export type FormStep = {
 
 export type CreateMultiStepFormArgs<T> = {
   validateFn: ValidationFunction<T>;
-  steps: Array<FormStep>;
+  steps: ReadonlyArray<FormStep>;
 };
 
 export type MultiStepProviderProps<T> = { children: React.ReactNode; initialValues: T };

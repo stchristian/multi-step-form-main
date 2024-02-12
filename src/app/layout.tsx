@@ -3,23 +3,23 @@ import localFont from "next/font/local";
 import "./globals.css";
 import bgMobile from "@/../public/images/bg-sidebar-mobile.svg";
 import Image from "next/image";
-import { Stepper } from "@/app/_components/Stepper";
-import { SubscriptionMultiStepFormProvider } from "@/app/SubscriptionMultiStepFormProvider";
+import { Stepper } from "@/components/Stepper";
+import { SubscriptionMultiStepFormProvider } from "@/app/_lib/subscription-form";
 
 const ubuntu = localFont({
   src: [
     {
-      path: "./fonts/Ubuntu-Regular.ttf",
+      path: "../fonts/Ubuntu-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Ubuntu-Medium.ttf",
+      path: "../fonts/Ubuntu-Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/Ubuntu-Bold.ttf",
+      path: "../fonts/Ubuntu-Bold.ttf",
       weight: "700",
       style: "normal",
     },

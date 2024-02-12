@@ -1,9 +1,9 @@
 "use client";
 import { Plan } from "@/app/plan/Plan";
-import { Description, Header, StepContent } from "@/app/_components/StepContent";
+import { Description, Header, StepContent } from "@/components/StepContent";
 import { plans } from "@/constants/plans";
 import { Switch } from "@/app/add-ons/Switch";
-import { useMultiStepFormContext } from "@/app/SubscriptionMultiStepForm";
+import { useMultiStepFormContext } from "@/app/_lib/subscription-form";
 
 export default function PlanPage() {
   const { setValue, planId, period } = useMultiStepFormContext();

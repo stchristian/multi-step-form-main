@@ -1,4 +1,6 @@
-export const steps = [
+import { FormStep } from "@/generic-multi-step-form";
+
+export const steps: ReadonlyArray<FormStep> = [
   {
     path: "/personal-info",
     name: "Your Info",

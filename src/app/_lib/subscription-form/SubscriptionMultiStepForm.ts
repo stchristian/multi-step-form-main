@@ -1,6 +1,6 @@
 "use client";
 
-import { FormErrors, createMultiStepForm } from "../generic-multi-step-form";
+import { FormErrors, createMultiStepForm } from "../../../generic-multi-step-form";
 import { steps } from "@/constants/steps";
 
 type PeriodType = "monthly" | "yearly";

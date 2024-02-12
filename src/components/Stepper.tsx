@@ -1,9 +1,9 @@
 "use client";
 
-import { steps } from "../../constants/steps";
+import { steps } from "../constants/steps";
 import bgDesktop from "@/../public/images/bg-sidebar-desktop.svg";
 import Image from "next/image";
-import { useMultiStepFormContext } from "@/app/SubscriptionMultiStepForm";
+import { useMultiStepFormContext } from "@/app/_lib/subscription-form/SubscriptionMultiStepForm";
 
 interface StepProps {
   active?: boolean;

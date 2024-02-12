@@ -1,10 +1,10 @@
 "use client";
-import { Description, Header, StepContent } from "@/app/_components/StepContent";
+import { Description, Header, StepContent } from "@/components/StepContent";
 import { addons } from "@/constants/addons";
 import checkmargSvg from "@/../public/images/icon-checkmark.svg";
 import Image from "next/image";
 import { formatAddonPrice } from "@/utils";
-import { useMultiStepFormContext } from "@/app/SubscriptionMultiStepForm";
+import { useMultiStepFormContext } from "@/app/_lib/subscription-form";
 
 export default function AddonsPage() {
   const { setValue, selectedAddonIds, period } = useMultiStepFormContext();
