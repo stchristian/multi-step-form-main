@@ -8,7 +8,7 @@ export type Addon = {
   };
 };
 
-export const addons: Array<Addon> = [
+export const addons: ReadonlyArray<Addon> = [
   {
     id: 1,
     name: "Online service",

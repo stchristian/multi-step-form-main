@@ -12,7 +12,7 @@ export type Plan = {
   icon: any;
 };
 
-export const plans: Array<Plan> = [
+export const plans: ReadonlyArray<Plan> = [
   {
     id: 1,
     name: "Arcade",

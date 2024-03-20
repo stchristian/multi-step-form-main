@@ -1,10 +1,11 @@
 export type FormErrors<T> = { [key in keyof T]?: string };
+export type Setter<T> = (name: keyof T, value: any) => void;
 
 export type MultiStepFormContextValueType<T> = T & {
   errors: FormErrors<T>;
   currentStep: number;
   completed: boolean;
-  setValue: (name: keyof T, value: any) => void;
+  setValue: Setter<T>;
   submitStep: () => void;
   submitForm: () => void;
   goBack: () => void;
@@ -17,7 +18,7 @@ export type FormStep = {
   name: string;
 };
 
-export type CreateMultiStepFormArgs<T> = {
+export type CreateMultiStepFormOptions<T> = {
   validateFn: ValidationFunction<T>;
   steps: ReadonlyArray<FormStep>;
 };

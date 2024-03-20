@@ -1,6 +1,6 @@
 "use client";
 
-import { FormValues, MultiStepFormProvider } from "@/app/_lib/subscription-form/SubscriptionMultiStepForm";
+import { FormValues, MultiStepFormProvider } from "@/app/_modules/subscription-form/SubscriptionMultiStepForm";
 import { PropsWithChildren } from "react";
 
 const initialValues: FormValues = {

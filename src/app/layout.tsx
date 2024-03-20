@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import bgMobile from "@/../public/images/bg-sidebar-mobile.svg";
 import Image from "next/image";
-import { Stepper } from "@/components/Stepper";
-import { SubscriptionMultiStepFormProvider } from "@/app/_lib/subscription-form";
+import { Stepper } from "@/app/_components/Stepper";
+import { SubscriptionMultiStepFormProvider } from "@/app/_modules/subscription-form";
 
 const ubuntu = localFont({
   src: [

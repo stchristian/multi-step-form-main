@@ -1,5 +1,5 @@
-import { Addon } from "@/constants/addons";
-import { Plan } from "@/constants/plans";
+import { Addon } from "@/app/_constants/addons";
+import { Plan } from "@/app/_constants/plans";
 
 export function formatPlanPrice(plan: Plan, period: string) {
   return `$${period === "monthly" ? `${plan.price.monthly}/mo` : `${plan.price.yearly}/yr`}`;

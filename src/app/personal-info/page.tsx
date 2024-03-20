@@ -1,8 +1,8 @@
 "use client";
 
 import TextInput from "@/app/personal-info/TextInput";
-import { Description, Header, StepContent } from "../../components/StepContent";
-import { useMultiStepFormContext } from "@/app/_lib/subscription-form";
+import { Description, Header, StepContent } from "@/app/_components/StepContent";
+import { useMultiStepFormContext } from "@/app/_modules/subscription-form";
 
 export default function PersonalInfo() {
   const { setValue, name, email, phoneNumber, errors } = useMultiStepFormContext();

@@ -1,15 +1,14 @@
-"use client";
-
 import {
-  CreateMultiStepFormArgs,
+  CreateMultiStepFormOptions,
   MultiStepFormContextValueType,
   FormErrors,
   MultiStepProviderProps,
-} from "@/generic-multi-step-form/MultiStepForm.types";
+  Setter,
+} from "@/app/_modules/generic-multi-step-form/MultiStepForm.types";
 import { usePathname, useRouter } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-export function createMultiStepForm<T = unknown>({ validateFn, steps }: CreateMultiStepFormArgs<T>) {
+export function createMultiStepForm<T>({ validateFn, steps }: CreateMultiStepFormOptions<T>) {
   const MultiStepFormContext = createContext<MultiStepFormContextValueType<T> | undefined>(undefined);
 
   function useMultiStepFormContext() {
@@ -61,8 +60,8 @@ export function createMultiStepForm<T = unknown>({ validateFn, steps }: CreateMu
       setCurrentStep(index + 1);
     }, [setCurrentStep, pathname]);
 
-    const setValue = useCallback(
-      (name: keyof T, value: any) => {
+    const setValue = useCallback<Setter<T>>(
+      (name, value) => {
         setState((oldState) => ({
           ...oldState,
           [name]: value,

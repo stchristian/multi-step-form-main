@@ -15,7 +15,6 @@ export function Switch({ name, value, onChange }: SwitchProps) {
       type="checkbox"
       role="switch"
       name={name}
-      id=""
       checked={value}
       onChange={onChange}
       className={`appearance-none ${base} ${after} ${checked}`}

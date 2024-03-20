@@ -1,4 +1,4 @@
-import { FormStep } from "@/generic-multi-step-form";
+import { FormStep } from "@/app/_modules/generic-multi-step-form";
 
 export const steps: ReadonlyArray<FormStep> = [
   {

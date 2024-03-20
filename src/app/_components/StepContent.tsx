@@ -1,7 +1,7 @@
 "use client";
 import { PropsWithChildren } from "react";
 import { Button } from "./Button";
-import { useMultiStepFormContext } from "@/app/_lib/subscription-form/SubscriptionMultiStepForm";
+import { useMultiStepFormContext } from "@/app/_modules/subscription-form/SubscriptionMultiStepForm";
 
 export function Header({ children }: PropsWithChildren<{}>) {
   return <h1 className="text-2xl lg:text-3xl text-blue-marine font-bold mb-2 mt-2 lg:mt-10">{children}</h1>;
